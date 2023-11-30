@@ -5,9 +5,9 @@ export enum STATUS {
 }
 
 export enum PERIOD {
-  ALL_TIME ,
-  MONTH =  30,
-  WEEK = 7,
+  WEEK,
+  MONTH,
+  ALL_TIME,
 }
 
 export type Post = {
@@ -27,31 +27,31 @@ const mockData: Post[] = [
   {
     id: 2,
     title: 'I\'m the survivor of my race',
-    createdTime: '2023-10-21',
+    createdTime: '2023-11-21',
     status: STATUS.ARCHIVED
   },
   {
     id: 3,
     title: 'Hear the tale of sadness and genocide',
-    createdTime: '2023-11-24',
+    createdTime: '2023-11-27',
     status: STATUS.ARCHIVED
   },
   {
     id: 4,
     title: 'Where the species disappeared',
-    createdTime: '2023-11-25',
+    createdTime: '2023-10-02',
     status: STATUS.PUBLISHED
   },
   {
     id: 5,
     title: 'And the trees could no longer breathe',
-    createdTime: '2023-11-26',
+    createdTime: '2023-11-16',
     status: STATUS.PUBLISHED
   },
   {
     id: 6,
-    title: '',
-    createdTime: '2023-11-29',
+    title: 'Asphyx',
+    createdTime: '2023-11-28',
     status: STATUS.PUBLISHED
   },
   {
@@ -63,13 +63,13 @@ const mockData: Post[] = [
   {
     id: 8,
     title: 'And the trees could no longer breathe',
-    createdTime: '2023-11-30',
+    createdTime: '2023-10-15',
     status: STATUS.DRAFT
   },
   {
     id: 9,
     title: 'A drama of collective suicide',
-    createdTime: '2023-11-30',
+    createdTime: '2023-11-14',
     status: STATUS.DRAFT
   },
   {
