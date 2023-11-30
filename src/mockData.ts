@@ -4,6 +4,12 @@ export enum STATUS {
   ARCHIVED = 'archived',
 }
 
+export enum PERIOD {
+  ALL_TIME ,
+  MONTH =  30,
+  WEEK = 7,
+}
+
 export type Post = {
   id: number,
   title: string,
@@ -15,61 +21,61 @@ const mockData: Post[] = [
   {
     id: 1,
     title: 'Behold my final testimony',
-    createdTime: '20230-06-06',
+    createdTime: '2023-10-20',
     status: STATUS.ARCHIVED
   },
   {
     id: 2,
     title: 'I\'m the survivor of my race',
-    createdTime: '20230-06-07',
+    createdTime: '2023-10-21',
     status: STATUS.ARCHIVED
   },
   {
     id: 3,
     title: 'Hear the tale of sadness and genocide',
-    createdTime: '20230-06-08',
+    createdTime: '2023-11-24',
     status: STATUS.ARCHIVED
   },
   {
     id: 4,
     title: 'Where the species disappeared',
-    createdTime: '20230-06-15',
+    createdTime: '2023-11-25',
     status: STATUS.PUBLISHED
   },
   {
     id: 5,
     title: 'And the trees could no longer breathe',
-    createdTime: '20230-06-16',
+    createdTime: '2023-11-26',
     status: STATUS.PUBLISHED
   },
   {
     id: 6,
     title: '',
-    createdTime: '20230-06-17',
+    createdTime: '2023-11-29',
     status: STATUS.PUBLISHED
   },
   {
     id: 7,
     title: 'And the trees could no longer breathe',
-    createdTime: '20230-06-27',
+    createdTime: '2023-11-30',
     status: STATUS.PUBLISHED
   },
   {
     id: 8,
     title: 'And the trees could no longer breathe',
-    createdTime: '20230-06-28',
+    createdTime: '2023-11-30',
     status: STATUS.DRAFT
   },
   {
     id: 9,
     title: 'A drama of collective suicide',
-    createdTime: '20230-06-29',
+    createdTime: '2023-11-30',
     status: STATUS.DRAFT
   },
   {
     id: 10,
     title: 'As we let our children suffer',
-    createdTime: '20230-07-06',
+    createdTime: '2023-11-30',
     status: STATUS.DRAFT
   }
 ]
