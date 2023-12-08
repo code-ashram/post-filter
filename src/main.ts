@@ -1,5 +1,12 @@
 import './style.css'
-import mockData, { PERIOD, Post } from './mockData.ts'
+import mockData, { PERIOD, Post, STATUS } from './mockData.ts'
+
+// const filterPosts = (period: PERIOD, title: string): Post[] => mockData.filter((post) =>
+//   period === PERIOD.ALL_TIME
+//     ? true
+//     : post.title.toLowerCase().includes(title.toLowerCase()) && new Date(post.createdTime) > new Date(new Date().setDate(new Date().getDate() - period)))
+//
+// console.log(filterPosts(PERIOD.ALL_TIME, 'And'))
 
 // const filterPosts = (title: string) => mockData.filter((post): Post[] => {
 //   return post.title.toLowerCase().includes(title.toLowerCase())
@@ -34,7 +41,7 @@ import mockData, { PERIOD, Post } from './mockData.ts'
 //
 // console.log(filterPosts(PERIOD.WEEK))
 
-const filterPosts = (period: PERIOD): Post[] => mockData.filter((post) => {
+const filterPosts = (period: PERIOD, title: string, status: STATUS): Post[] => mockData.filter((post) => {
   let isAvailable: boolean
   const time = new Date(new Date().setDate(new Date().getDate() - period))
 
@@ -49,15 +56,15 @@ const filterPosts = (period: PERIOD): Post[] => mockData.filter((post) => {
       isAvailable = true
   }
 
-  return isAvailable
+  return isAvailable && post.title.toLowerCase().includes(title.toLowerCase()) && post.status === status
 })
 
-console.log(filterPosts(PERIOD.MONTH))
+console.log(filterPosts(PERIOD.ALL_TIME, "And", STATUS.PUBLISHED))
 
 // const filterPosts = (period: PERIOD): Post[] => mockData.filter((post) => {
 //   const time = new Date(new Date().setDate(new Date().getDate() - period))
 //
-//   return  period === PERIOD.ALL_TIME ? true : new Date(time) < new Date(post.createdTime)
+//   return period === PERIOD.ALL_TIME ? true : new Date(time) < new Date(post.createdTime)
 // })
 
 // const filterPosts = (period: PERIOD): Post[] => mockData.filter((post) => {
